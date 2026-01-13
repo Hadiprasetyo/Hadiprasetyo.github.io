@@ -247,6 +247,39 @@
             <img src="images/GCL.png" alt="Logo 15">
         </div>
     </div>
+<!-- ===== PROJECT GALLERY ===== -->
+<section id="project-gallery">
+    <div class="gallery-title">
+        <h2>My Projects</h2>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="images/project1.jpg" alt="Project 1" onclick="openLightbox(0)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project2.jpg" alt="Project 2" onclick="openLightbox(1)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project3.jpg" alt="Project 3" onclick="openLightbox(2)">
+        </div>
+        <div class="gallery-item">
+            <img src="images/project4.jpg" alt="Project 4" onclick="openLightbox(3)">
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" class="lightbox-content">
+    <div class="lightbox-nav">
+        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+        <span class="next" onclick="changeImage(1)">&#10095;</span>
+    </div>
+</div>
+
+    
     <section class="our-services"></section>
     <!--==contact============================================-->
     <section id="contact" class="contact">
@@ -322,6 +355,42 @@
 
         // Memulai animasi di awal
         images.forEach(image => startAnimation(image));
+ // gallery images 
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        currentIndex = index;
+        lightbox.style.display = 'block';
+        lightboxImage.src = galleryImages[currentIndex].src;
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    function changeImage(step) {
+        currentIndex += step;
+
+        if (currentIndex >= galleryImages.length) {
+            currentIndex = 0;
+        } else if (currentIndex < 0) {
+            currentIndex = galleryImages.length - 1;
+        }
+
+        lightboxImage.src = galleryImages[currentIndex].src;
+    }
+
+    // Close lightbox ketika klik area gelap
+    lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+        
     </script>
 </body>
 
