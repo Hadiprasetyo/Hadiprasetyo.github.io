@@ -248,6 +248,13 @@
             <img src="images/GCL.png" alt="Logo 15">
         </div>
     </div>
+    <!-- category gallery  -->
+    <div class="project-filter">
+    <button class="filter-btn active" data-filter="all">Semua</button>
+    <button class="filter-btn" data-filter="web">Website</button>
+    <button class="filter-btn" data-filter="mobile">Mobile App</button>
+    <button class="filter-btn" data-filter="design">UI/UX</button>
+</div>
     <!-- ===== PROJECT GALLERY ===== -->
     <section id="project-gallery">
         <div class="gallery-title">
@@ -255,13 +262,13 @@
         </div>
 
         <div class="gallery-container">
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="web">
                 <img src="images/2.png" alt="Project 1" onclick="openLightbox(0)">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="web">
                 <img src="images/3.png" alt="Project 2" onclick="openLightbox(1)">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item" data-category="web">
                 <img src="images/4.png" alt="Project 3" onclick="openLightbox(2)">
             </div>
             <div class="gallery-item">
@@ -468,6 +475,31 @@
                 closeLightbox();
             }
         });
+
+        // categori 
+        const filterButtons = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        // active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        galleryItems.forEach(item => {
+            const category = item.getAttribute('data-category');
+
+            if (filter === 'all' || category === filter) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+});
     </script>
 </body>
 
