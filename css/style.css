@@ -671,6 +671,24 @@ footer .footer-logo {
 
 
 /* ===== PROJECT GALLERY ===== */
+.project-filter{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.filter-btn{
+    padding:10px 20px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.filter-btn.active{
+    background:#000;
+    color:#fff;
+}
 #project-gallery {
     width: 100%;
     background-color: #161616;
