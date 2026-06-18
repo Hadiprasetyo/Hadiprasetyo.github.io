@@ -76,7 +76,7 @@
         <strong>About Me</strong>
         <h2>Hello, I'm A Web Design & Web Development</h2>
         <div class="about-text">
-             <p>Nama saya Hadi prasetyo pernah bekerja di salah satu perusahaan sebagai manager warehouse lebih dari <b>
+            <p>Nama saya Hadi prasetyo pernah bekerja di salah satu perusahaan sebagai manager warehouse lebih dari <b>
                     5th,</b> dan pernah membuat beberapa <b>website compay profile, sistem ERP, dan juga custome sesuai
                     kebutuhan</b> di beberapa perusahaan <span>
                     sekaligus <b>Founder creativemediateknologi.com</b> penyedia jasa layanan <b>rental electronic,
@@ -248,45 +248,117 @@
             <img src="images/GCL.png" alt="Logo 15">
         </div>
     </div>
-    <div class="project-filter">
-    <button class="filter-btn active" data-filter="all">Semua</button>
-    <button class="filter-btn" data-filter="web">Website</button>
-    <button class="filter-btn" data-filter="mobile">Mobile App</button>
-    <button class="filter-btn" data-filter="design">UI/UX</button>
-</div>
-<!-- ===== PROJECT GALLERY ===== -->
-<section id="project-gallery">
-    <div class="gallery-title">
-        <h2>My Projects</h2>
-    </div>
-<!-- kategori  -->
+    <!-- ===== PROJECT GALLERY ===== -->
+    <section id="project-gallery">
+        <div class="gallery-title">
+            <h2>My Projects</h2>
+        </div>
 
-    <div class="gallery-container">
-     <div class="gallery-item" data-category="web">
-        <img src="images/2.png" alt="Project 1">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/2.png" alt="Project 1" onclick="openLightbox(0)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/3.png" alt="Project 2" onclick="openLightbox(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/4.png" alt="Project 3" onclick="openLightbox(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/5.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/6.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/7.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/8.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/9.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/10.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/10.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/11.png" alt="Project 1" onclick="openLightbox(0)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/12.png" alt="Project 2" onclick="openLightbox(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/13.png" alt="Project 3" onclick="openLightbox(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/14.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/15.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/16.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/17.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/18.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/19.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/20.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/21.png" alt="Project 1" onclick="openLightbox(0)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/22.png" alt="Project 2" onclick="openLightbox(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/23.png" alt="Project 3" onclick="openLightbox(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/24.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/25.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/26.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/27.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/28.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/29.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/30.png" alt="Project 4" onclick="openLightbox(3)">
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" class="lightbox-content">
+        <div class="lightbox-nav">
+            <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+            <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
     </div>
 
-    <div class="gallery-item" data-category="mobile">
-        <img src="images/3.png" alt="Project 2">
-    </div>
 
-    <div class="gallery-item" data-category="design">
-        <img src="images/4.png" alt="Project 3">
-    </div>
-    </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox">
-    <span class="close" onclick="closeLightbox()">&times;</span>
-    <img id="lightbox-image" class="lightbox-content">
-    <div class="lightbox-nav">
-        <span class="prev" onclick="changeImage(-1)">&#10094;</span>
-        <span class="next" onclick="changeImage(1)">&#10095;</span>
-    </div>
-</div>
-
-    
     <section class="our-services"></section>
     <!--==contact============================================-->
     <section id="contact" class="contact">
@@ -362,65 +434,40 @@
 
         // Memulai animasi di awal
         images.forEach(image => startAnimation(image));
- // gallery images 
+        // gallery images 
         const galleryImages = document.querySelectorAll('.gallery-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImage = document.getElementById('lightbox-image');
-    let currentIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        let currentIndex = 0;
 
-    function openLightbox(index) {
-        currentIndex = index;
-        lightbox.style.display = 'block';
-        lightboxImage.src = galleryImages[currentIndex].src;
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
-
-    function changeImage(step) {
-        currentIndex += step;
-
-        if (currentIndex >= galleryImages.length) {
-            currentIndex = 0;
-        } else if (currentIndex < 0) {
-            currentIndex = galleryImages.length - 1;
+        function openLightbox(index) {
+            currentIndex = index;
+            lightbox.style.display = 'block';
+            lightboxImage.src = galleryImages[currentIndex].src;
         }
 
-        lightboxImage.src = galleryImages[currentIndex].src;
-    }
-
-    // Close lightbox ketika klik area gelap
-    lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) {
-            closeLightbox();
+        function closeLightbox() {
+            lightbox.style.display = 'none';
         }
-    });
 
-    // gallery project 
-        const filterButtons = document.querySelectorAll('.filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
+        function changeImage(step) {
+            currentIndex += step;
 
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
+            if (currentIndex >= galleryImages.length) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = galleryImages.length - 1;
+            }
 
-        // active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+            lightboxImage.src = galleryImages[currentIndex].src;
+        }
 
-        const filter = button.getAttribute('data-filter');
-
-        galleryItems.forEach(item => {
-            const category = item.getAttribute('data-category');
-
-            if (filter === 'all' || category === filter) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
+        // Close lightbox ketika klik area gelap
+        lightbox.addEventListener('click', function (e) {
+            if (e.target === lightbox) {
+                closeLightbox();
             }
         });
-    });
-});
     </script>
 </body>
 
