@@ -370,7 +370,29 @@ ul {
 .contact a i {
     margin-left: 10px;
 }
+/* halaman  */
 
+.pagination{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:40px;
+}
+
+.pagination button{
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#222;
+    color:#fff;
+}
+
+.pagination button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}
 
 /*==footer========================*/
 
