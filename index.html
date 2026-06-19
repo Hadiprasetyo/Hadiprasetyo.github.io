@@ -467,6 +467,57 @@ filterButtons.forEach(button => {
         });
     });
 });
+        // halaman 
+        document.addEventListener("DOMContentLoaded", () => {
+
+    const items = document.querySelectorAll(".gallery-item");
+
+    const itemsPerPage = 6;
+    let currentPage = 1;
+
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const pageInfo = document.getElementById("pageInfo");
+
+    function showPage(page){
+
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+
+        items.forEach((item,index)=>{
+            item.style.display =
+                index >= start && index < end
+                ? "block"
+                : "none";
+        });
+
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        pageInfo.textContent = `${page} / ${totalPages}`;
+
+        prevBtn.disabled = page === 1;
+        nextBtn.disabled = page === totalPages;
+    }
+
+    prevBtn.addEventListener("click", () => {
+        if(currentPage > 1){
+            currentPage--;
+            showPage(currentPage);
+        }
+    });
+
+    nextBtn.addEventListener("click", () => {
+        const totalPages = Math.ceil(items.length / itemsPerPage);
+
+        if(currentPage < totalPages){
+            currentPage++;
+            showPage(currentPage);
+        }
+    });
+
+    showPage(currentPage);
+
+});
     </script>
 </body>
 
