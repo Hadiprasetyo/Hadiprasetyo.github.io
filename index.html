@@ -317,11 +317,12 @@
         </div>
     </section>
 <!-- halaman  -->
-    <div class="pagination">
+    <!-- <div class="pagination">
     <button id="prevBtn">Prev</button>
     <span id="pageInfo"></span>
     <button id="nextBtn">Next</button>
-</div>
+</div> -->
+    <!-- halamam akhir  -->
     <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
         <span class="close" onclick="closeLightbox()">&times;</span>
@@ -467,57 +468,58 @@ filterButtons.forEach(button => {
         });
     });
 });
-        // halaman 
-        document.addEventListener("DOMContentLoaded", () => {
+//         // halaman  awal 
+//         document.addEventListener("DOMContentLoaded", () => {
 
-    const items = document.querySelectorAll(".gallery-item");
+//     const items = document.querySelectorAll(".gallery-item");
 
-    const itemsPerPage = 6;
-    let currentPage = 1;
+//     const itemsPerPage = 6;
+//     let currentPage = 1;
 
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    const pageInfo = document.getElementById("pageInfo");
+//     const prevBtn = document.getElementById("prevBtn");
+//     const nextBtn = document.getElementById("nextBtn");
+//     const pageInfo = document.getElementById("pageInfo");
 
-    function showPage(page){
+//     function showPage(page){
 
-        const start = (page - 1) * itemsPerPage;
-        const end = start + itemsPerPage;
+//         const start = (page - 1) * itemsPerPage;
+//         const end = start + itemsPerPage;
 
-        items.forEach((item,index)=>{
-            item.style.display =
-                index >= start && index < end
-                ? "block"
-                : "none";
-        });
+//         items.forEach((item,index)=>{
+//             item.style.display =
+//                 index >= start && index < end
+//                 ? "block"
+//                 : "none";
+//         });
 
-        const totalPages = Math.ceil(items.length / itemsPerPage);
+//         const totalPages = Math.ceil(items.length / itemsPerPage);
 
-        pageInfo.textContent = `${page} / ${totalPages}`;
+//         pageInfo.textContent = `${page} / ${totalPages}`;
 
-        prevBtn.disabled = page === 1;
-        nextBtn.disabled = page === totalPages;
-    }
+//         prevBtn.disabled = page === 1;
+//         nextBtn.disabled = page === totalPages;
+//     }
 
-    prevBtn.addEventListener("click", () => {
-        if(currentPage > 1){
-            currentPage--;
-            showPage(currentPage);
-        }
-    });
+//     prevBtn.addEventListener("click", () => {
+//         if(currentPage > 1){
+//             currentPage--;
+//             showPage(currentPage);
+//         }
+//     });
 
-    nextBtn.addEventListener("click", () => {
-        const totalPages = Math.ceil(items.length / itemsPerPage);
+//     nextBtn.addEventListener("click", () => {
+//         const totalPages = Math.ceil(items.length / itemsPerPage);
 
-        if(currentPage < totalPages){
-            currentPage++;
-            showPage(currentPage);
-        }
-    });
+//         if(currentPage < totalPages){
+//             currentPage++;
+//             showPage(currentPage);
+//         }
+//     });
 
-    showPage(currentPage);
+//     showPage(currentPage);
 
-});
+// });
+        // halaman akhir 
     </script>
 </body>
 
